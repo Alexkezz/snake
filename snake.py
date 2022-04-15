@@ -1,7 +1,5 @@
-from string import whitespace
 from tkinter import *
 import random
-from turtle import pos
 
 ventana = Tk()
 ventana.geometry("500x500")
@@ -15,23 +13,23 @@ def mover_serpiente():
     global posx
     global posy
     if posicion_siguiente == "Right":
-        if posx > 500:
-            posx -= 550
+        if posx > 485:
+            posx -= 510
         else:
             posx += 3
     elif posicion_siguiente == "Left":
-        if posx < -50:
-            posx += 550
+        if posx < -25:
+            posx += 510
         else:
             posx -= 3
     elif posicion_siguiente == "Up":
-        if posy < -50:
-            posy += 550
+        if posy < -25:
+            posy += 440
         else:
             posy -= 3
     elif posicion_siguiente == "Down":
-        if posy < 500:
-            posy -= 550
+        if posy > 415:
+            posy -= 440
         else:
             posy += 3
     snake.place(x=posx, y=posy)
